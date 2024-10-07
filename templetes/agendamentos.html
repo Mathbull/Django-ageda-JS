@@ -1,0 +1,51 @@
+
+{% extends "model-page.html" %}
+
+{% block content %}
+
+<div class="agendamento-container">
+    <h1>Agendamentos</h1>
+
+    <div class="agendamentos-filter">
+        <div class="filter {% if filter == 'all' %} selected {% endif %} " >
+            <p>All</p>
+        </div>
+        <div class="filter {% if filter == 'time-in' %} selected {% endif %} " >
+            <p>Time-in</p>
+        </div>
+        <div class="filter {% if filter == 'time-out' %} selected {% endif %} " >
+            <p>Time-out</p>
+        </div>
+    </div>
+
+
+    <table>
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Data do Evento</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for evento in eventos %}
+            <tr>
+                <td>{{ evento.titulo }}</td>
+                <td>{{ evento.get_data_evento }}</td>
+                <td class="action-links">
+                    <a href="#">Editar</a> /
+                    <a href="evento/delete/{{ evento.id }}">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button class="button-new-evento" id="button-new-evento">
+        <a href="eventos" class="link-new-evento"> Novo evento</a>
+    </button>
+
+    
+
+    
+</div>
+{% endblock %}

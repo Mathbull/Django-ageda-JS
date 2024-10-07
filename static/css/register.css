@@ -1,0 +1,36 @@
+
+.login-container{
+    width: 400px !important;
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+.register-input {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+.register-button {
+    width: 80px;
+    padding: 10px;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.register-button:hover {
+    box-shadow: 0 0 3px 5px rgba(255, 153, 0, 0.7);
+}
+.form-group .error {
+    color: red;
+    font-size: 12px;
+}
+

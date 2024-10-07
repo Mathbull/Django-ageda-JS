@@ -1,0 +1,32 @@
+.agendamentos-filter {
+    margin-bottom: 15px;
+    display:  flex;
+    justify-content: center;
+}
+
+.agendamentos-filter p, a{
+    text-decoration: none;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    
+    
+} 
+
+.agendamentos-filter div {
+    width: 80px;
+    margin-left: 20px;
+    border-radius: 3px;
+    background-color: rgb(18, 17, 17, 0.5);
+    cursor: pointer;
+}
+
+.no_select {
+    display: none;
+
+}
+
+.select a{
+    color:  #ff9900;
+}
+

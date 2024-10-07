@@ -1,0 +1,34 @@
+
+
+{% extends "model-page-login.html" %}
+
+
+
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet"  href="{% static 'css/register.css' %}">
+<div class=" ">
+
+        <h2>Registrar-se</h2>
+        <form  action="submit" method="POST">{% csrf_token %}
+
+            <input type="text" class="register-input" name="new_username" placeholder="Nome de usuário" required id="username" onchange="validarForms()">
+            <input type="text" class="register-input" name="email" placeholder="E-mail" required id="email" onchange="validarForms()">
+
+            <input type="password" class="register-input" name="new_password" placeholder="Senha" required id="password" onchange="validarForms()">
+            <input type="password" class="register-input" name="new_password_2" placeholder="Confirmar senha" required id="password2" onchange="validarForms()">
+
+
+            <br>
+ 
+            
+            <button class="register-button" type="button" id="buttonReturn_login"><a href="/login" >Logar</a></button>
+            <button class="register-button  disabled_button" type="submit" id="buttonRegister">Register</button>
+
+        </form>
+
+    </div>
+
+{% endblock %}

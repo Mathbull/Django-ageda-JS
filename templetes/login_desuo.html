@@ -1,0 +1,41 @@
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPGenda - Página de Login</title>
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'css/login_style.css' %}">
+    <link rel="stylesheet"  href="{% static 'css/meidaQuery.css' %}">
+</head>
+<body class="clouds">
+    <div class="container">
+
+    
+        <div class="login-container">
+            <h1>RPGenda</h1>
+
+            <h2>Login</h2>
+
+
+            <form action="submit" method="POST">{% csrf_token %}
+
+                <input type="text" class="login-input" name="username" placeholder="Nome de usuário" required>
+
+                <input type="password" class="login-input" name="password" placeholder="Senha" required>
+                <br><br>
+
+                <button type="submit" class="login-button">Entrar</button>
+            </form>
+            {% for menssage in messages %}
+            <p>  <strong>Erro! </strong> {{ menssage }} </p>
+            {% endfor %}
+        </div>
+
+    
+        
+</div>
+</body>
+</html>
+

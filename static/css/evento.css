@@ -1,0 +1,47 @@
+
+
+.evento-container{
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333333;
+    border-radius: 10px;
+
+    
+}
+
+.evento-container:hover{
+    box-shadow: 0 0 10px 0  #ff9900;
+}
+
+
+.evento-button {
+    width: 80px;
+    padding: 10px;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.evento-button a {
+    text-decoration: none;
+    color:  #ffffff;
+}
+
+.evento-input{
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+.evento-input:focus {
+    background-color: #1a1a1a; /* Mantém o fundo escuro */
+    color: #ffffff; /* Mantém a cor do texto branca */
+    border-color: #ff9900; /* Opcional: muda a cor da borda quando em foco */
+}

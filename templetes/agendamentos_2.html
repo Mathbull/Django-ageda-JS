@@ -1,0 +1,111 @@
+
+{% extends "model-page.html" %}
+
+{% block content %}
+
+{% load static %}
+<link rel="stylesheet"  href="{% static 'css/agendamentos_filter_2.css' %}">
+
+<div class="agendamento-container">
+    <h1>Agendamentos</h1>
+
+    <div class="agendamentos-filter">
+        <div class="filter-2  select " id="all">
+            <a href="#">All</a>
+        </div>
+        <div class="filter-2   " id="in">
+            <a href="#">Time-in</a>
+        </div>
+        <div class="filter-2 " id="out">
+            <a href="#">Time-out</a href="#">
+        </div>
+    </div>
+
+    {% if evento_all %}
+
+    <table id="evento_all" class=" " >
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Data do Evento</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for evento in evento_all %}
+            <tr>
+                <td>{{ evento.titulo }}</td>
+                <td>{{ evento.get_data_evento }}</td>
+                <td class="action-links">
+                    <a href="eventos/?id={{ evento.id }}">Editar</a> /
+                    <a href="eventos/delete/{{ evento.id }}">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>    
+
+    {% endif %}
+
+    {% if evento_in %}
+
+    <table  id="evento_in" class="no_select">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Data do Evento</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for evento in evento_in %}
+            <tr>
+                <td>{{ evento.titulo }}</td>
+                <td>{{ evento.get_data_evento }}</td>
+                <td class="action-links">
+                    <a href="#">Editar</a> /
+                    <a href="evento/delete/{{ evento.id }}">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endif %}
+
+
+    {% if evento_out %}
+
+    <table  id="evento_out"  class="no_select">
+        <thead>
+            <tr>
+                <th>Título</th>
+                <th>Data do Evento</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for evento in evento_out %}
+            <tr>
+                <td>{{ evento.titulo }}</td>
+                <td>{{ evento.get_data_evento }}</td>
+                <td class="action-links">
+                    <a href="#">Editar</a> /
+                    <a href="evento/delete/{{ evento.id }}">Excluir</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    {% endif %}
+
+    <button class="button-new-evento" id="button-new-evento">
+        <a href="eventos" class="link-new-evento"> Novo evento</a>
+    </button>
+
+    
+
+    
+</div>
+{% endblock %}

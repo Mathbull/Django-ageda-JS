@@ -1,0 +1,17 @@
+@media (max-width: 420px){
+    .clouds{
+        background-size: cover !important;
+    }
+
+    .agendamento-container{
+        margin: 10px !important;
+        margin-bottom: 200px;
+    }
+
+    .evento-container{
+        margin: 10px !important;
+    }
+
+
+ 
+}   

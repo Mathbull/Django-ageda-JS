@@ -1,0 +1,28 @@
+
+
+{% extends "model-page-login.html" %}
+
+
+
+{% block content %}
+<h2>Login</h2>
+
+            <form action="submit" method="POST">{% csrf_token %}
+
+                <input type="text" class="login-input" name="username" placeholder="Nome de usuário" required id="username" onchange="validarLogin()">
+
+                <input type="password" class="login-input" name="password" placeholder="Senha" required id="password"  onchange="validarLogin()">
+                <br><br>
+
+
+                <button  type="button" class="register-button" id="buttonRegister"><a href="/register">Register</a></button>
+
+                <button type="submit" class="login-button disabled_button" id="buttonLogin">Logar</button>
+                
+                
+
+            </form>
+
+
+
+{% endblock %}

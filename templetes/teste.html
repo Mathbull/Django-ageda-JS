@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo para o dropdown */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333; /* Cor de fundo escura */
+            color: #fff; /* Cor do texto */
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Estilo para os itens do dropdown */
+        .dropdown-item {
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        .dropdown-item:hover {
+            background-color: #555; /* Cor de fundo mais escura ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown">
+        <span>Menu</span>
+        <div class="dropdown-content">
+            <div class="dropdown-item">Item 1</div>
+            <div class="dropdown-item">Item 2</div>
+            <div class="dropdown-item">Item 3</div>
+        </div>
+    </div>
+</body>
+</html>

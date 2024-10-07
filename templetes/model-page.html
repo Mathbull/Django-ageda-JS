@@ -1,0 +1,27 @@
+<html lang="pt-br">
+<head>
+    {% include "model-header.html" %}
+</head>
+<body  class="clouds">
+    
+    <div class="navbar">
+        <div class="left">
+            <a href="/"  class="{% if request.path in '/agenda/' %} navBar_selected {% endif %}" >Home</a>
+            <a href="/agenda/eventos/" class="{% if 'eventos/' in request.path   %} navBar_selected {% endif %}" >Eventos</a>
+            <a href="#">Sobre</a>
+            <a href="#">Contatos</a>
+        </div>
+        <div class="right">
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    
+    {% block content %}
+
+    {% endblock %}
+
+    {% include "model-footer.html" %}
+
+
+</body>
+</html>

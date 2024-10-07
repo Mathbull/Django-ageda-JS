@@ -1,0 +1,156 @@
+
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+
+}
+html{
+    background: linear-gradient(45deg,  #b9cce4, #01203c);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+
+.clouds {
+    
+    background: url('clud_7.png') repeat-x;
+    background-size: contain; /* Ajusta o tamanho da imagem */
+    animation: moveClouds 30s linear infinite;
+    height: 100%;
+    margin: 0;
+    width: 100%;
+}
+@keyframes moveClouds {
+    from { background-position: 0 0; }
+    to { background-position: -1000px 0; }
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #333333;
+    border-radius: 5px;
+    margin: 10px 10px 40px 10px;
+}
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+.navbar a:hover {
+    color: #ff9900;
+}
+.navbar .right {
+    display: flex;
+    align-items: center;
+}
+.navBar_selected {
+    color: #ff9900 !important;
+}
+
+
+
+
+.agendamento-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333333;
+    border-radius: 10px;
+
+}
+
+.agendamento-container:hover {
+    box-shadow: 0 0 10px 0  #ff9900;
+    
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #555555;
+}
+th {
+    background-color: #444444;
+}
+.action-links a {
+    color: #ff9900;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.action-links a:hover {
+    text-decoration: underline;
+}
+
+.button-new-evento {
+    
+    padding: 10px;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 5px;
+    
+    cursor: pointer;
+
+}
+
+.button-new-evento a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+
+
+
+
+
+.footer {
+    background-color: #333333;
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #ff9900;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.footer a {
+    color: #ff9900;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.footer a:hover {
+    text-decoration: underline;
+}
+.footer p {
+    margin: 5px 0;
+}
+
+
+button:hover {
+    box-shadow: 0 0 3px 5px rgba(255, 153, 0, 0.7); /* Adiciona um brilho laranja */
+}
+
+
+
+
