@@ -121,13 +121,12 @@ print(BASE_DIR/'static')
 
 
 STATIC_URL = '/static/'
-
 if DEBUG:
     STATICFILES_DIRS = [
-        BASE_DIR/'..'/'static',
+        BASE_DIR/'static',
     ]
 else:
-    STATIC_ROOT = BASE_DIR/'..'/'static'
+    STATIC_ROOT = BASE_DIR/'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
